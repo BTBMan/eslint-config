@@ -1,0 +1,27 @@
+{
+  "name": "@btbman/eslint-config",
+  "version": "0.0.0",
+  "description": "BTBMan's ESLint config",
+  "author": "BTBMan",
+  "license": "MIT",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./vue": "./vue.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "devDependencies": {
+    "@btbman/eslint-config-vue": "workspace:*"
+  }
+}

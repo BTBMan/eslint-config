@@ -1,0 +1,15 @@
+{
+  "name": "@btbman/eslint-config-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "author": "BTBMan",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@btbman/eslint-config": "workspace:*",
+    "eslint": "^8.40.0",
+    "eslint-define-config": "^1.20.0"
+  }
+}
