@@ -21,7 +21,7 @@
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "@btbman/eslint-config-vue": "workspace:*"
   }
 }
