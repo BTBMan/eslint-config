@@ -4,6 +4,11 @@ const tsconfig = process.env.ESLINT_TSCONFIG || 'tsconfig.eslint.json';
 
 module.exports = defineConfig({
   extends: ['plugin:@typescript-eslint/recommended'],
+  settings: {
+    'import/resolver': {
+      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
+    },
+  },
   overrides: [
     {
       parserOptions: {
@@ -13,6 +18,14 @@ module.exports = defineConfig({
       parser: '@typescript-eslint/parser',
       files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
       rules: {},
+    },
+    {
+      files: ['**/__tests__/**/*.ts', '**/*.spec.ts', '**/*.test.ts'],
+      plugins: ['jest'],
+      rules: {
+        '@typescript-eslint/unbound-method': 'off',
+        'jest/unbound-method': 'error',
+      },
     },
   ],
   rules: {
