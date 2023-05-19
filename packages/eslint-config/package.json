@@ -9,7 +9,7 @@
   ],
   "main": "index.js",
   "files": [
-    "index.js"
+    "*.js"
   ],
   "exports": {
     ".": "./index.js",
@@ -22,6 +22,7 @@
     "eslint": ">=7.4.0"
   },
   "dependencies": {
+    "@btbman/eslint-config-base": "workspace:*",
     "@btbman/eslint-config-vue": "workspace:*",
     "eslint-define-config": "^1.20.0"
   }
