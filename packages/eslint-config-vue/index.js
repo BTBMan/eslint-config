@@ -1,53 +1,38 @@
 const { defineConfig } = require('eslint-define-config');
+const { isPackageExists } = require('local-pkg');
+
+const TS = isPackageExists('typescript');
+
+if (!TS) {
+  // eslint-disable-next-line no-console
+  console.warn(
+    '[@btbman/eslint-config] TypeScript is not installed, fallback to JS only.',
+  );
+}
 
 module.exports = defineConfig({
-  root: true,
-  plugins: ['@typescript-eslint', 'prettier', 'unicorn'],
   extends: [
-    '.eslintrc-auto-import.json',
-    'eslint:recommended',
-    'airbnb-base',
-    'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
-    'prettier',
+    TS ? '@btbman/eslint-config-ts' : '@btbman/eslint-config-base',
   ],
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    extraFileExtensions: ['.vue'],
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
   env: {
-    browser: true,
-    es6: true,
-    node: true,
     'vue/setup-compiler-macros': true,
   },
   overrides: [
     {
       files: ['*.vue'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
       rules: {
+        'no-unused-vars': 'off',
         'no-undef': 'off',
+        ...(TS ? { '@typescript-eslint/no-unused-vars': 'off' } : null),
       },
     },
   ],
   rules: {
-    'prettier/prettier': 'error',
-    'no-console': ['warn', { allow: ['error'] }],
-    'no-empty': ['error', { allowEmptyCatch: true }],
-    'no-unused-vars': 'off',
-    'no-var': 'warn',
-    'no-restricted-syntax': 'off',
-    'no-param-reassign': 'off',
-    'no-plusplus': 'off',
-    'no-shadow': 'off',
-    'no-use-before-define': 'off',
-    'no-underscore-dangle': 'off',
-    'no-multi-assign': 'off',
-    'no-undef': 'off',
     'vue/html-closing-bracket-newline': 'warn',
     'vue/multi-word-component-names': 'off',
     'vue/no-deprecated-html-element-is': 'off',
@@ -72,29 +57,5 @@ module.exports = defineConfig({
         ignores: [],
       },
     ],
-    'import/no-dynamic-require': 'off',
-    'import/no-import-module-exports': 'off',
-    'import/no-unresolved': 'off',
-    'import/extensions': 'off',
-    'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/semi': 'error',
-    '@typescript-eslint/no-inferrable-types': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-shadow': 'error',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
-    'default-case': 'off',
-    'global-require': 'off',
-    'prefer-const': 'error',
-    'guard-for-in': 'off',
-    'next-line': 'off',
-    'class-methods-use-this': 'off',
-    'unicorn/prefer-node-protocol': 'error',
   },
 });

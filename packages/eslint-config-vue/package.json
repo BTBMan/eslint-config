@@ -16,5 +16,11 @@
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
+  },
+  "dependencies": {
+    "@btbman/eslint-config-base": "workspace:*",
+    "@btbman/eslint-config-ts": "workspace:*",
+    "eslint-plugin-vue": "^9.13.0",
+    "local-pkg": "^0.4.3"
   }
 }
