@@ -11,9 +11,7 @@
   "files": [
     "*.js"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },

@@ -279,8 +279,13 @@ module.exports = defineConfig({
     'guard-for-in': 'off',
     'next-line': 'off',
     'class-methods-use-this': 'off',
+    eqeqeq: ['error', 'smart'],
 
     // eslint comment
     'eslint-comments/disable-enable-pair': 'off',
+
+    // yml
+    'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
+    'yml/no-empty-document': 'off',
   },
 });

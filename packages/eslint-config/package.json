@@ -7,17 +7,15 @@
   "keywords": [
     "eslint-config"
   ],
-  "main": "index.js",
-  "files": [
-    "*.js"
-  ],
   "exports": {
     ".": "./index.js",
     "./vue": "./vue.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {},
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },
