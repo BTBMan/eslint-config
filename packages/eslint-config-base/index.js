@@ -37,7 +37,6 @@ module.exports = defineConfig({
     'html',
     'no-only-tests',
     'unused-imports',
-    ...(PRETTIER ? ['prettier'] : []),
   ],
   extends: [
     'eslint:recommended',
@@ -46,7 +45,7 @@ module.exports = defineConfig({
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
-    ...(PRETTIER ? ['prettier'] : []),
+    ...(PRETTIER ? ['./prettier'] : []),
   ],
   ignorePatterns: [
     '*.min.*',
@@ -241,9 +240,6 @@ module.exports = defineConfig({
     },
   ],
   rules: {
-    // prettier
-    ...(PRETTIER ? { 'prettier/prettier': 'error' } : null),
-
     // unicorn
     'unicorn/prefer-node-protocol': 'error',
 
