@@ -1,12 +1,18 @@
+/* eslint-disable no-console */
 const { defineConfig } = require('eslint-define-config');
 const { isPackageExists } = require('local-pkg');
 
 const PRETTIER = isPackageExists('prettier');
-
 if (PRETTIER) {
-  // eslint-disable-next-line no-console
   console.info(
     '[@btbman/eslint-config-base] Prettier is installed, Using Prettier now.',
+  );
+}
+
+const TS = isPackageExists('typescript');
+if (!TS) {
+  console.warn(
+    '[@btbman/eslint-config-base] TypeScript is not installed, fallback to JS only.',
   );
 }
 
@@ -41,11 +47,12 @@ module.exports = defineConfig({
   extends: [
     'eslint:recommended',
     'airbnb-base',
+    ...(TS ? ['./typescript'] : []),
+    ...(PRETTIER ? ['./prettier'] : []),
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
-    ...(PRETTIER ? ['./prettier'] : []),
   ],
   ignorePatterns: [
     '*.min.*',
@@ -265,12 +272,15 @@ module.exports = defineConfig({
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
 
-    // best practice
+    // best-practice
     'default-case': 'off',
     'global-require': 'off',
     'prefer-const': 'error',
     'guard-for-in': 'off',
     'next-line': 'off',
     'class-methods-use-this': 'off',
+
+    // eslint comment
+    'eslint-comments/disable-enable-pair': 'off',
   },
 });

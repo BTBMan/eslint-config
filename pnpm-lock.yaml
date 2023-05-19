@@ -24,6 +24,8 @@ importers:
 
   packages/eslint-config-base:
     specifiers:
+      '@typescript-eslint/eslint-plugin': ^5.59.6
+      '@typescript-eslint/parser': ^5.59.1
       eslint-config-airbnb-base: ^15.0.0
       eslint-config-prettier: ^8.8.0
       eslint-define-config: ^1.20.0
@@ -43,12 +45,14 @@ importers:
       local-pkg: ^0.4.3
       yaml-eslint-parser: ^1.2.2
     dependencies:
+      '@typescript-eslint/eslint-plugin': 5.59.6_ysaetyfixuhgpojwb5ejeg74ze
+      '@typescript-eslint/parser': 5.59.1
       eslint-config-airbnb-base: 15.0.0_5rfvta7qn57kxm7ir36ta6fixq
       eslint-config-prettier: 8.8.0
       eslint-define-config: 1.20.0
       eslint-plugin-eslint-comments: 3.2.0
       eslint-plugin-html: 7.1.0
-      eslint-plugin-import: 2.27.5
+      eslint-plugin-import: 2.27.5_ysaetyfixuhgpojwb5ejeg74ze
       eslint-plugin-jsonc: 2.8.0
       eslint-plugin-markdown: 3.0.0
       eslint-plugin-n: 16.0.0
@@ -56,34 +60,20 @@ importers:
       eslint-plugin-prettier: 4.2.1_oaez6fkrrb5zzrowm57o6j34fq
       eslint-plugin-promise: 6.1.1
       eslint-plugin-unicorn: 47.0.0
-      eslint-plugin-unused-imports: 2.0.0
+      eslint-plugin-unused-imports: 2.0.0_higbxupwmotceuwsxvrsbbilt4
       eslint-plugin-yml: 1.7.0
       jsonc-eslint-parser: 2.3.0
       local-pkg: 0.4.3
       yaml-eslint-parser: 1.2.2
 
-  packages/eslint-config-ts:
-    specifiers:
-      '@btbman/eslint-config-base': workspace:*
-      '@typescript-eslint/eslint-plugin': ^5.59.6
-      '@typescript-eslint/parser': ^5.59.1
-      eslint-define-config: ^1.20.0
-    dependencies:
-      '@btbman/eslint-config-base': link:../eslint-config-base
-      '@typescript-eslint/eslint-plugin': 5.59.6_ysaetyfixuhgpojwb5ejeg74ze
-      '@typescript-eslint/parser': 5.59.1
-      eslint-define-config: 1.20.0
-
   packages/eslint-config-vue:
     specifiers:
       '@btbman/eslint-config-base': workspace:*
-      '@btbman/eslint-config-ts': workspace:*
       eslint-define-config: ^1.20.0
       eslint-plugin-vue: ^9.13.0
       local-pkg: ^0.4.3
     dependencies:
       '@btbman/eslint-config-base': link:../eslint-config-base
-      '@btbman/eslint-config-ts': link:../eslint-config-ts
       eslint-define-config: 1.20.0
       eslint-plugin-vue: 9.13.0
       local-pkg: 0.4.3
@@ -795,7 +785,7 @@ packages:
         optional: true
     dependencies:
       confusing-browser-globals: 1.0.11
-      eslint-plugin-import: 2.27.5
+      eslint-plugin-import: 2.27.5_ysaetyfixuhgpojwb5ejeg74ze
       object.assign: 4.1.4
       object.entries: 1.1.6
       semver: 6.3.0
@@ -825,7 +815,7 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-module-utils/2.8.0_sgsp5urgqm477dupjnxj5zkyya:
+  /eslint-module-utils/2.8.0_bs2dekojpkencnjjzbnwjcywey:
     resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -846,6 +836,7 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
     dependencies:
+      '@typescript-eslint/parser': 5.59.1
       debug: 3.2.7
       eslint-import-resolver-node: 0.3.7
     transitivePeerDependencies:
@@ -884,7 +875,7 @@ packages:
       htmlparser2: 8.0.2
     dev: false
 
-  /eslint-plugin-import/2.27.5:
+  /eslint-plugin-import/2.27.5_ysaetyfixuhgpojwb5ejeg74ze:
     resolution: {integrity: sha512-LmEt3GVofgiGuiE+ORpnvP+kAm3h6MLZJ4Q5HCyHADofsb4VzXFsRiWj3c0OFiV+3DWFh0qg3v9gcPlfc3zRow==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -896,13 +887,14 @@ packages:
       eslint:
         optional: true
     dependencies:
+      '@typescript-eslint/parser': 5.59.1
       array-includes: 3.1.6
       array.prototype.flat: 1.3.1
       array.prototype.flatmap: 1.3.1
       debug: 3.2.7
       doctrine: 2.1.0
       eslint-import-resolver-node: 0.3.7
-      eslint-module-utils: 2.8.0_sgsp5urgqm477dupjnxj5zkyya
+      eslint-module-utils: 2.8.0_bs2dekojpkencnjjzbnwjcywey
       has: 1.0.3
       is-core-module: 2.12.1
       is-glob: 4.0.3
@@ -1025,7 +1017,7 @@ packages:
       strip-indent: 3.0.0
     dev: false
 
-  /eslint-plugin-unused-imports/2.0.0:
+  /eslint-plugin-unused-imports/2.0.0_higbxupwmotceuwsxvrsbbilt4:
     resolution: {integrity: sha512-3APeS/tQlTrFa167ThtP0Zm0vctjr4M44HMpeg1P4bK6wItarumq0Ma82xorMKdFsWpphQBlRPzw/pxiVELX1A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -1037,6 +1029,7 @@ packages:
       eslint:
         optional: true
     dependencies:
+      '@typescript-eslint/eslint-plugin': 5.59.6_ysaetyfixuhgpojwb5ejeg74ze
       eslint-rule-composer: 0.3.0
     dev: false
 

@@ -3,18 +3,8 @@ const { isPackageExists } = require('local-pkg');
 
 const TS = isPackageExists('typescript');
 
-if (!TS) {
-  // eslint-disable-next-line no-console
-  console.warn(
-    '[@btbman/eslint-config-vue] TypeScript is not installed, fallback to JS only.',
-  );
-}
-
 module.exports = defineConfig({
-  extends: [
-    'plugin:vue/vue3-recommended',
-    TS ? '@btbman/eslint-config-ts' : '@btbman/eslint-config-base',
-  ],
+  extends: ['plugin:vue/vue3-recommended', '@btbman/eslint-config-base'],
   env: {
     'vue/setup-compiler-macros': true,
   },

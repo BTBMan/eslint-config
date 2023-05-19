@@ -3,10 +3,7 @@ const { defineConfig } = require('eslint-define-config');
 const tsconfig = process.env.ESLINT_TSCONFIG || 'tsconfig.eslint.json';
 
 module.exports = defineConfig({
-  extends: [
-    '@btbman/eslint-config-base',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['plugin:@typescript-eslint/recommended'],
   overrides: [
     {
       parserOptions: {
