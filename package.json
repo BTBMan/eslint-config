@@ -17,7 +17,8 @@
     "peerDependencyRules": {
       "ignoreMissing": [
         "eslint",
-        "typescript"
+        "typescript",
+        "prettier"
       ],
       "allowedVersions": {}
     }

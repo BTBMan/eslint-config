@@ -6,7 +6,7 @@ const TS = isPackageExists('typescript');
 if (!TS) {
   // eslint-disable-next-line no-console
   console.warn(
-    '[@btbman/eslint-config] TypeScript is not installed, fallback to JS only.',
+    '[@btbman/eslint-config-vue] TypeScript is not installed, fallback to JS only.',
   );
 }
 

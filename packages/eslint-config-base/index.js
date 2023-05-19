@@ -1,4 +1,14 @@
 const { defineConfig } = require('eslint-define-config');
+const { isPackageExists } = require('local-pkg');
+
+const PRETTIER = isPackageExists('prettier');
+
+if (PRETTIER) {
+  // eslint-disable-next-line no-console
+  console.info(
+    '[@btbman/eslint-config-base] Prettier is installed, Using Prettier now.',
+  );
+}
 
 module.exports = defineConfig({
   env: {
@@ -27,6 +37,7 @@ module.exports = defineConfig({
     'html',
     'no-only-tests',
     'unused-imports',
+    ...(PRETTIER ? ['prettier'] : []),
   ],
   extends: [
     'eslint:recommended',
@@ -35,6 +46,7 @@ module.exports = defineConfig({
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
+    ...(PRETTIER ? ['prettier'] : []),
   ],
   ignorePatterns: [
     '*.min.*',
@@ -229,6 +241,9 @@ module.exports = defineConfig({
     },
   ],
   rules: {
+    // prettier
+    ...(PRETTIER ? { 'prettier/prettier': 'error' } : null),
+
     // unicorn
     'unicorn/prefer-node-protocol': 'error',
 
