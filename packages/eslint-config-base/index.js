@@ -48,11 +48,11 @@ module.exports = defineConfig({
     'eslint:recommended',
     'airbnb-base',
     ...(TS ? ['./typescript'] : []),
-    ...(PRETTIER ? ['./prettier'] : []),
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
+    ...(PRETTIER ? ['./prettier'] : []),
   ],
   ignorePatterns: [
     '*.min.*',
