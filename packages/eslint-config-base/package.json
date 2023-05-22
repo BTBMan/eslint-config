@@ -1,6 +1,6 @@
 {
   "name": "@btbman/eslint-config-base",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "BTBMan's ESLint config",
   "author": "BTBMan",
   "license": "MIT",
