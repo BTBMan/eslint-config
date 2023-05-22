@@ -8,6 +8,8 @@
 pnpm add -D eslint @btbman/eslint-config
 ```
 
+> Typescript and Prettier are optional.
+
 ### Config `.eslintrc`
 
 ```jsonc
