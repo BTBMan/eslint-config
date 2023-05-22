@@ -10,13 +10,13 @@ pnpm add -D eslint @btbman/eslint-config
 
 ### Config `.eslintrc`
 
-```json
+```jsonc
 {
   "extends": "@btbman" // Basic config for Javascript and Typescript.
 }
 ```
 
-```json
+```jsonc
 {
   "extends": "@btbman/eslint-config/vue" // For Vue.
 }
@@ -28,7 +28,7 @@ pnpm add -D eslint @btbman/eslint-config
 
 For example:
 
-```json
+```jsonc
 {
   "scripts": {
     "lint": "eslint .",
@@ -41,7 +41,7 @@ For example:
 
 Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and create `.vscode/settings.json`
 
-```json
+```jsonc
 {
   "prettier.enable": true, // Enable if your're using prettier.
   "editor.codeActionsOnSave": {
@@ -71,7 +71,7 @@ If your project has the prettier dependence. It can automatically use prettier t
 
 If you want to apply lint and auto-fix before every commit, you can add the following to your `package.json`:
 
-```json
+```jsonc
 {
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

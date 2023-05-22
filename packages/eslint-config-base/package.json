@@ -4,6 +4,7 @@
   "description": "BTBMan's ESLint config",
   "author": "BTBMan",
   "license": "MIT",
+  "homepage": "https://github.com/btbman/eslint-config",
   "keywords": [
     "eslint-config"
   ],
