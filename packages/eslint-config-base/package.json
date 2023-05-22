@@ -48,5 +48,13 @@
     "jsonc-eslint-parser": "^2.3.0",
     "local-pkg": "^0.4.3",
     "yaml-eslint-parser": "^1.2.2"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "typescript",
+        "prettier"
+      ]
+    }
   }
 }
