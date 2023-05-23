@@ -1,11 +1,11 @@
 # @btbman/eslint-config
 
-## usage
+## Usage
 
 ### Install
 
 ```bash
-pnpm add -D eslint @btbman/eslint-config
+pnpm i -D eslint @btbman/eslint-config
 ```
 
 > Typescript and Prettier are optional.
@@ -73,7 +73,7 @@ Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?it
 }
 ```
 
-> Enable Prettier if your're using that.
+> Enable Prettier if your're using.
 
 ### TypeScript Aware Rules
 
@@ -95,7 +95,7 @@ If your project has the prettier dependence. It can automatically use prettier t
 If you are using svelte. you have to do something first.
 
 ```bash
-pnpm install -D prettier-plugin-svelte
+pnpm i -D prettier-plugin-svelte
 ```
 
 Update `prettier.config.js`
@@ -103,7 +103,9 @@ Update `prettier.config.js`
 ```diff
 ...
 plugins: [
+   ...
 +  'prettier-plugin-svelte'
+   ...
 ],
 ...
 ```
@@ -128,5 +130,5 @@ Or you can add the above to the specified configuration file.
 and then
 
 ```bash
-npm i -D lint-staged simple-git-hooks # Or Husky
+pnpm i -D lint-staged simple-git-hooks # Or Husky
 ```
