@@ -17,4 +17,5 @@ module.exports = {
   vueIndentScriptAndStyle: true,
   endOfLine: 'auto',
   rangeStart: 0,
+  plugins: ['prettier-plugin-svelte'],
 };

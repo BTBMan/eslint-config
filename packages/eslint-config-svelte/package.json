@@ -1,5 +1,5 @@
 {
-  "name": "@btbman/eslint-config",
+  "name": "@btbman/eslint-config-svelte",
   "version": "0.0.8",
   "description": "BTBMan's ESLint config",
   "author": "BTBMan",
@@ -8,14 +8,9 @@
   "keywords": [
     "eslint-config"
   ],
-  "exports": {
-    ".": "./index.js",
-    "./vue": "./vue.js",
-    "./svelte": "./svelte.js"
-  },
   "main": "index.js",
   "files": [
-    "*.js"
+    "index.js"
   ],
   "scripts": {},
   "peerDependencies": {
@@ -23,8 +18,8 @@
   },
   "dependencies": {
     "@btbman/eslint-config-base": "workspace:*",
-    "@btbman/eslint-config-svelte": "workspace:*",
-    "@btbman/eslint-config-vue": "workspace:*",
-    "eslint-define-config": "^1.20.0"
+    "eslint-define-config": "^1.20.0",
+    "eslint-plugin-svelte": "^2.29.0",
+    "local-pkg": "^0.4.3"
   }
 }

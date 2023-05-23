@@ -1,8 +1,5 @@
 const { defineConfig } = require('eslint-define-config');
 
 module.exports = defineConfig({
-  extends: ['plugin:prettier/recommended'],
-  rules: {
-    'prettier/prettier': 'error',
-  },
+  extends: ['@btbman/eslint-config-svelte'],
 });

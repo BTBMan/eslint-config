@@ -12,7 +12,8 @@ pnpm add -D eslint @btbman/eslint-config
 
 ### Config `.eslintrc`
 
-Basic config for Javascript and Typescript.
+<details open>
+<summary>Basic config for Javascript and Typescript.</summary><br>
 
 ```json
 {
@@ -20,13 +21,45 @@ Basic config for Javascript and Typescript.
 }
 ```
 
-For Vue.
+</details>
+
+<details>
+<summary>Vue</summary><br>
 
 ```json
 {
   "extends": "@btbman/eslint-config/vue"
 }
 ```
+
+</details>
+
+<details open>
+<summary>Svelte</summary><br>
+
+```json
+{
+  "extends": "@btbman/eslint-config/svelte"
+}
+```
+
+Work with Prettier
+
+```bash
+pnpm install -D prettier-plugin-svelte
+```
+
+And update `prettier.config.js`
+
+```diff
+...
+plugins: [
++  'prettier-plugin-svelte'
+],
+...
+```
+
+</details>
 
 > You don't need `.eslintignore` normally as it has been provided by the preset.
 
