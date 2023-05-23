@@ -1,3 +1,4 @@
+/** @type {import('prettier').Config} */
 module.exports = {
   printWidth: 80,
   tabWidth: 2,
@@ -17,5 +18,13 @@ module.exports = {
   vueIndentScriptAndStyle: true,
   endOfLine: 'auto',
   rangeStart: 0,
-  plugins: ['prettier-plugin-svelte'],
+  plugins: ['prettier-plugin-svelte', 'prettier-plugin-astro'],
+  overrides: [
+    {
+      files: '*.astro',
+      options: {
+        parser: 'astro',
+      },
+    },
+  ],
 };

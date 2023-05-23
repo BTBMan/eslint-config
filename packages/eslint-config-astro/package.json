@@ -1,5 +1,5 @@
 {
-  "name": "@btbman/eslint-config",
+  "name": "@btbman/eslint-config-astro",
   "version": "0.0.8",
   "description": "BTBMan's ESLint config",
   "author": "BTBMan",
@@ -8,25 +8,18 @@
   "keywords": [
     "eslint-config"
   ],
-  "exports": {
-    ".": "./index.js",
-    "./vue": "./vue.js",
-    "./svelte": "./svelte.js",
-    "./astro": "./astro.js"
-  },
   "main": "index.js",
   "files": [
-    "*.js"
+    "index.js"
   ],
   "scripts": {},
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "@btbman/eslint-config-astro": "workspace:*",
     "@btbman/eslint-config-base": "workspace:*",
-    "@btbman/eslint-config-svelte": "workspace:*",
-    "@btbman/eslint-config-vue": "workspace:*",
-    "eslint-define-config": "^1.20.0"
+    "eslint-define-config": "^1.20.0",
+    "eslint-plugin-astro": "^0.27.0",
+    "local-pkg": "^0.4.3"
   }
 }

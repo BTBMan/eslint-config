@@ -45,6 +45,17 @@ pnpm i -D eslint @btbman/eslint-config
 
 </details>
 
+<details>
+<summary>Astro</summary><br>
+
+```json
+{
+  "extends": "@btbman/eslint-config/astro"
+}
+```
+
+</details>
+
 > You don't need `.eslintignore` normally as it has been provided by the preset.
 
 ### Add script for package.json
@@ -90,9 +101,9 @@ module.exports = {
 
 ### Working with Prettier
 
-If your project has the prettier dependence. It can automatically use prettier to lint.
+If your project has the Prettier dependence. It can automatically use Prettier to lint.
 
-If you are using svelte. you have to do something first.
+For Svelte
 
 ```bash
 pnpm i -D prettier-plugin-svelte
@@ -103,9 +114,37 @@ Update `prettier.config.js`
 ```diff
 ...
 plugins: [
-   ...
-+  'prettier-plugin-svelte'
-   ...
+  ...
++ 'prettier-plugin-svelte'
+  ...
+],
+...
+```
+
+For Astro
+
+```bash
+pnpm i -D prettier-plugin-astro
+```
+
+Update `prettier.config.js`
+
+```diff
+...
+plugins: [
+  ...
++ 'prettier-plugin-astro'
+  ...
+],
+overrides: [
+  ...
++ {
++   files: '*.astro',
++   options: {
++     parser: 'astro',
++   },
++ },
+  ...
 ],
 ...
 ```

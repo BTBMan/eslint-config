@@ -20,6 +20,7 @@ module.exports = defineConfig({
           ts: '@typescript-eslint/parser',
           tsx: '@typescript-eslint/parser',
         },
+        extraFileExtensions: ['.svelte'],
       },
     },
   ],
