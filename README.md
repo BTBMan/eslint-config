@@ -34,29 +34,13 @@ pnpm add -D eslint @btbman/eslint-config
 
 </details>
 
-<details open>
+<details>
 <summary>Svelte</summary><br>
 
 ```json
 {
   "extends": "@btbman/eslint-config/svelte"
 }
-```
-
-Work with Prettier
-
-```bash
-pnpm install -D prettier-plugin-svelte
-```
-
-And update `prettier.config.js`
-
-```diff
-...
-plugins: [
-+  'prettier-plugin-svelte'
-],
-...
 ```
 
 </details>
@@ -104,9 +88,25 @@ module.exports = {
 };
 ```
 
-### Work with Prettier
+### Working with Prettier
 
 If your project has the prettier dependence. It can automatically use prettier to lint.
+
+If you are using svelte. you have to do something first.
+
+```bash
+pnpm install -D prettier-plugin-svelte
+```
+
+Update `prettier.config.js`
+
+```diff
+...
+plugins: [
++  'prettier-plugin-svelte'
+],
+...
+```
 
 ### Lint Staged
 
