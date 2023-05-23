@@ -103,13 +103,13 @@ module.exports = {
 
 If your project has the Prettier dependence. It can automatically use Prettier to lint.
 
-For Svelte
+For Svelte.
 
 ```bash
 pnpm i -D prettier-plugin-svelte
 ```
 
-Update `prettier.config.js`
+Update the `prettier.config.js`
 
 ```diff
 ...
@@ -121,13 +121,13 @@ plugins: [
 ...
 ```
 
-For Astro
+For Astro.
 
 ```bash
 pnpm i -D prettier-plugin-astro
 ```
 
-Update `prettier.config.js`
+Update the `prettier.config.js`
 
 ```diff
 ...
@@ -169,5 +169,5 @@ Or you can add the above to the specified configuration file.
 and then
 
 ```bash
-pnpm i -D lint-staged simple-git-hooks # Or Husky
+pnpm i -D lint-staged simple-git-hooks # Or Husky.
 ```
