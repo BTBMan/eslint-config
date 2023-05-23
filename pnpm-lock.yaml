@@ -8,12 +8,14 @@ importers:
       bumpp: ^9.1.0
       eslint: ^8.40.0
       eslint-define-config: ^1.20.0
+      prettier: ^2.8.8
       typescript: ^5.0.4
     devDependencies:
       '@btbman/eslint-config': link:packages/eslint-config
       bumpp: 9.1.0
       eslint: 8.40.0
       eslint-define-config: 1.20.0
+      prettier: 2.8.8
       typescript: 5.0.4
 
   packages/eslint-config:
@@ -2216,6 +2218,12 @@ packages:
     dependencies:
       fast-diff: 1.2.0
     dev: false
+
+  /prettier/2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
 
   /prompts/2.4.2:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
