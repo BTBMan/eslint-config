@@ -1,3 +1,5 @@
+const fs = require('node:fs');
+const { join } = require('node:path');
 const { defineConfig } = require('eslint-define-config');
 
 const tsconfig = process.env.ESLINT_TSCONFIG || 'tsconfig.eslint.json';
@@ -9,25 +11,27 @@ module.exports = defineConfig({
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
     },
   },
-  overrides: [
-    {
-      parserOptions: {
-        tsconfigRootDir: process.cwd(),
-        project: [tsconfig],
-      },
-      parser: '@typescript-eslint/parser',
-      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
-      rules: {},
-    },
-    {
-      files: ['**/__tests__/**/*.ts', '**/*.spec.ts', '**/*.test.ts'],
-      plugins: ['jest'],
-      rules: {
-        '@typescript-eslint/unbound-method': 'off',
-        'jest/unbound-method': 'error',
-      },
-    },
-  ],
+  overrides: !fs.existsSync(join(process.cwd(), tsconfig))
+    ? []
+    : [
+        {
+          parserOptions: {
+            tsconfigRootDir: process.cwd(),
+            project: [tsconfig],
+          },
+          parser: '@typescript-eslint/parser',
+          files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+          rules: {},
+        },
+        {
+          files: ['**/__tests__/**/*.ts', '**/*.spec.ts', '**/*.test.ts'],
+          plugins: ['jest'],
+          rules: {
+            '@typescript-eslint/unbound-method': 'off',
+            'jest/unbound-method': 'error',
+          },
+        },
+      ],
   rules: {
     'typescript-eslint/ban-types': 'off',
     '@typescript-eslint/semi': 'error',

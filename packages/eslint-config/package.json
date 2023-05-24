@@ -12,7 +12,8 @@
     ".": "./index.js",
     "./vue": "./vue.js",
     "./svelte": "./svelte.js",
-    "./astro": "./astro.js"
+    "./astro": "./astro.js",
+    "./solid": "./solid.js"
   },
   "main": "index.js",
   "files": [
@@ -25,6 +26,7 @@
   "dependencies": {
     "@btbman/eslint-config-astro": "workspace:*",
     "@btbman/eslint-config-base": "workspace:*",
+    "@btbman/eslint-config-solid": "workspace:*",
     "@btbman/eslint-config-svelte": "workspace:*",
     "@btbman/eslint-config-vue": "workspace:*",
     "eslint-define-config": "^1.20.0"

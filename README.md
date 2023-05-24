@@ -56,6 +56,17 @@ pnpm i -D eslint @btbman/eslint-config
 
 </details>
 
+<details>
+<summary>Solid</summary><br>
+
+```json
+{
+  "extends": "@btbman/eslint-config/solid"
+}
+```
+
+</details>
+
 > You don't need `.eslintignore` normally as it has been provided by the preset.
 
 ### Add script for package.json

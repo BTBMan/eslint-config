@@ -1,0 +1,25 @@
+{
+  "name": "@btbman/eslint-config-solid",
+  "version": "0.0.8",
+  "description": "BTBMan's ESLint config",
+  "author": "BTBMan",
+  "license": "MIT",
+  "homepage": "https://github.com/btbman/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {},
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "dependencies": {
+    "@btbman/eslint-config-base": "workspace:*",
+    "eslint-define-config": "^1.20.0",
+    "eslint-plugin-solid": "^0.12.1",
+    "local-pkg": "^0.4.3"
+  }
+}
