@@ -171,3 +171,5 @@ and then
 ```bash
 pnpm i -D lint-staged simple-git-hooks # Or Husky.
 ```
+
+Inspired by [antfu/eslint-config](https://github.com/antfu/eslint-config)
