@@ -162,7 +162,7 @@ overrides: [
 
 ### Lint Staged
 
-If you want to apply lint and auto-fix before every commit, you can add the following to your `package.json`:
+If you want to apply lint and auto-fix before every commit, you can add the following to your `package.json` or add the above to the specified configuration file:
 
 ```json
 {
@@ -175,9 +175,7 @@ If you want to apply lint and auto-fix before every commit, you can add the foll
 }
 ```
 
-Or you can add the above to the specified configuration file.
-
-and then
+And then
 
 ```bash
 pnpm i -D lint-staged simple-git-hooks # Or Husky.
