@@ -162,7 +162,7 @@ overrides: [
 
 ### Lint Staged
 
-If you want to apply lint and auto-fix before every commit, you can add the following to your `package.json` or add the below to the specified configuration file:
+If you want to apply lint and auto-fix before every commit, you can add the following to your `package.json` or the specified configuration file:
 
 ```json
 {
