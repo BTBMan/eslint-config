@@ -247,6 +247,10 @@ module.exports = defineConfig({
     },
   ],
   rules: {
+    // eslint
+    'no-useless-constructor': 'off',
+    'arrow-body-style': 'error',
+
     // unicorn
     'unicorn/prefer-node-protocol': 'error',
 
