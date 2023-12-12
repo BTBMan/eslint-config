@@ -1,6 +1,6 @@
 {
   "name": "@btbman/eslint-config-svelte",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BTBMan's ESLint config",
   "author": "BTBMan",
   "license": "MIT",
