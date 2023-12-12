@@ -1,6 +1,6 @@
 {
   "name": "@btbman/eslint-config-astro",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "BTBMan's ESLint config",
   "author": "BTBMan",
   "license": "MIT",
