@@ -50,7 +50,7 @@ module.exports = defineConfig({
       'PascalCase',
       {
         registeredComponentsOnly: false,
-        ignores: [],
+        ignores: ['iconify-icon'],
       },
     ],
   },
